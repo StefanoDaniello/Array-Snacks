@@ -5,10 +5,10 @@ Crea due array che hanno un numero di elementi diversi.
 Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
 */
 
-let arrayco = document.getElementById('arrayco')
-let arrayfr = document.getElementById('arrayfr')
-let result = document.getElementById('result')
-
+let arrayco = document.getElementById('arrayco');
+let arrayfr = document.getElementById('arrayfr');
+let result = document.getElementById('result');
+let button =document.querySelector('.btn');
 
 let colori =[
     'red',
@@ -35,5 +35,9 @@ for(i=0 ; i<somma ; i++){
     console.log(frutta)
 }
 
+button.addEventListener('click' , function(){
+    result.innerHTML=frutta;
+})
 
-result.innerHTML=frutta;
+
+
