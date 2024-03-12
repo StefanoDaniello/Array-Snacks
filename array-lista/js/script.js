@@ -32,22 +32,22 @@ frButton.addEventListener('click' , function(){
     let tavolo = 'pesca';
     refrigerator.push(tavolo);
     console.log(refrigerator);
-    let userFruits = document.getElementById('userFruit').value;
+    let userFruit = document.getElementById('userFruit').value;
     let found=false;
     let frResult= document.getElementById('frResult');
 
     for(i=0; i<=refrigerator.length; i++){
         console.log(i)
-        if(userFruits === refrigerator[i]){
+        if(userFruit === refrigerator[i]){
             found=true;
         }
     }
 
     if(found){
         frResult.innerHTML="Trovato! Devo solo preparare il cocktail.";
-    }else if(userFruits === '' || !isNaN(userFruits)){
+    }else if(userFruit === '' || !isNaN(userFruit)){
         frResult.innerHTML='Errore inserici un frutto!'
-    }else if(userFruits !== refrigerator){
+    }else if(userFruit !== refrigerator){
         frResult.innerHTML='questo frutto non c\è nel frigo!'
     }else{
         frResult.innerHTML="Oh no, devo uscire a comprare il cocomero!"
@@ -56,7 +56,9 @@ frButton.addEventListener('click' , function(){
 })
 
 const frClear = document.getElementById('frClear');
+
 frClear.addEventListener("click", function(){
-    userFruits.value= '';
-    frResult.innerHTML= '';
+userFruit.value= '';
+frResult.innerHTML= '';
+
 })
