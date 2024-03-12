@@ -19,13 +19,19 @@ nuButton.addEventListener('click' , function(){
 
     let numeri =[];
     let userNumber=document.getElementById('userNumber').value;
-    console.log(numeri,userNumber);
-    let randomNumber;
+    console.log(userNumber);
+    let nuResult=document.getElementById('nuResult');
     for(let i =1 ; i<=userNumber ; i++){
-        randomNumber=getRndInteger(1, 100);
-        console.log(randomNumber)
+        if(userNumber>= 5){
+            let randomNumber=getRndInteger(1, 100);
+            numeri.push(randomNumber);
+            console.log(numeri);
+        }else{
+            nuResult.innerHTML='Devi inserire minimo 5 numeri!';
+        }
     }
-  
+    console.log(numeri);
+    
 })
 
 
