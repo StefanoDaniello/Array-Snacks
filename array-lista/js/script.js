@@ -15,8 +15,8 @@ Sì, lo sappiamo che esiste la funzione includes() ma noi non la vogliamo utiliz
 
 
 
-const frButton =document.getElementById('frButton');
 
+const frButton =document.getElementById('frButton');
 frButton.addEventListener('click' , function(){
     let refrigerator =[
         'banana', 
@@ -32,7 +32,6 @@ frButton.addEventListener('click' , function(){
     let tavolo = 'pesca';
     refrigerator.push(tavolo);
     console.log(refrigerator);
-    
     let userFruits = document.getElementById('userFruit').value;
     let found=false;
     let frResult= document.getElementById('frResult');
