@@ -14,21 +14,20 @@ Sì, lo sappiamo che esiste la funzione includes() ma noi non la vogliamo utiliz
 */
 
 
-
-
+let refrigerator =[
+    'banana', 
+    'mela', 
+    'pera', 
+    'ciliegia', 
+    'arancia', 
+    'mandarino', 
+    'cocomero',
+    'limone', 
+    'fragola'  
+];
+console.log(refrigerator);
 const frButton =document.getElementById('frButton');
 frButton.addEventListener('click' , function(){
-    let refrigerator =[
-        'banana', 
-        'mela', 
-        'pera', 
-        'ciliegia', 
-        'arancia', 
-        'mandarino', 
-        'cocomero',
-        'limone', 
-        'fragola'  
-    ];
     let tavolo = 'pesca';
     refrigerator.push(tavolo);
     console.log(refrigerator);
@@ -38,7 +37,7 @@ frButton.addEventListener('click' , function(){
 
     for(i=0; i<=refrigerator.length; i++){
         console.log(i)
-        if(userFruit === refrigerator[i]){
+        if(userFruit.toLowerCase() === refrigerator[i]){
             found=true;
         }
     }
