@@ -27,10 +27,10 @@ let frutta=[
 arrayco.innerHTML= colori;
 arrayfr.innerHTML= frutta;
 
-let somma = colori.length-frutta.length;
-console.log(somma)
+let sottrazione = colori.length-frutta.length;
+console.log(sottrazione)
 
-for(i=0 ; i<somma ; i++){
+for(i=0 ; i<sottrazione ; i++){
     frutta.push('frutta')
     console.log(frutta)
 }
@@ -38,6 +38,3 @@ for(i=0 ; i<somma ; i++){
 button.addEventListener('click' , function(){
     result.innerHTML=frutta;
 })
-
-
-
