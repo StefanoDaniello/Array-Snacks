@@ -18,22 +18,27 @@ nuButton.addEventListener('click' , function(){
     let userNumber=document.getElementById('userNumber').value;
     console.log(userNumber);
     let errore=document.getElementById('errore');
-    for(let i =1 ; i<=userNumber ; i++){
-        if(userNumber>= 5){
+    for(let i =0 ; i<userNumber ; i++){
+        if(userNumber>=1){
             let randomNumber=getRndInteger(1, 100);
             numeri.push(randomNumber);
             console.log(numeri);
         }else{
-            errore.innerHTML='Devi inserire minimo 5 numeri!';
+            errore.innerHTML='Devi inserire minimo 1 numero!';
         }
     }
     console.log(numeri);
     let userChoice =document.getElementById('userChoice').value;
     console.log(userChoice);
-    let lastFive= numeri.slice(-userChoice);
-    let nuResult = document.getElementById('nuResult');
-    nuResult.innerHTML = lastFive;
-    
+    let errore2=document.getElementById('errore2');
+    if(userChoice  < numeri.length){
+        let lastFive= numeri.slice(-userChoice);
+        let nuResult = document.getElementById('nuResult');
+        nuResult.innerHTML = lastFive;
+    }else{
+        errore2.innerHTML='non inserire numeri più grandi!';
+        nuResult.innerHTML = '';
+    }
 })
 
 
