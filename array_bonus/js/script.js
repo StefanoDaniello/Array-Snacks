@@ -29,12 +29,26 @@ arrayfr.innerHTML= frutta;
 
 let sottrazione = colori.length-frutta.length;
 console.log(sottrazione)
-
 for(i=0 ; i<sottrazione ; i++){
     frutta.push('frutta')
     console.log(frutta)
 }
-
 button.addEventListener('click' , function(){
     result.innerHTML=frutta;
 })
+
+
+// while(colori.length =! frutta.length){
+
+//     if (frutta.length < colori.length){
+//         frutta.push('frutta')
+//     }else{
+//         colori.push('colori')
+//     }
+// }
+
+
+//  button.addEventListener('click' , function(){
+//     result.innerHTML=frutta;
+//     result.innerHTML=colori;
+// })

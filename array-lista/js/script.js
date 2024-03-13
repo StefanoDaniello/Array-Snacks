@@ -32,22 +32,22 @@ frButton.addEventListener('click' , function(){
     refrigerator.push(tavolo);
     console.log(refrigerator);
     let userFruit = document.getElementById('userFruit').value;
-    let found=false;
+    let flag=false;
     let frResult= document.getElementById('frResult');
 
     for(i=0; i<=refrigerator.length; i++){
         console.log(i)
-        if(userFruit.toLowerCase() === refrigerator[i]){
-            found=true;
+        if(userFruit.toLowerCase() == 'cocomero'){
+            flag=true;
         }
     }
 
-    if(found){
+    if(flag){
         frResult.innerHTML="Trovato! Devo solo preparare il cocktail.";
     }else if(userFruit === '' || !isNaN(userFruit)){
         frResult.innerHTML='Errore inserici un frutto!'
     }else if(userFruit !== refrigerator){
-        frResult.innerHTML='questo frutto non c\è nel frigo!'
+        frResult.innerHTML='questo frutto non c\ è nel frigo!'
     }else{
         frResult.innerHTML="Oh no, devo uscire a comprare il cocomero!"
     }

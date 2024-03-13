@@ -40,7 +40,3 @@ nuButton.addEventListener('click' , function(){
         nuResult.innerHTML = '';
     }
 })
-
-
-
-
